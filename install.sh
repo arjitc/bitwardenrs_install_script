@@ -59,6 +59,14 @@ sudo git config --global user.name "${name}"
 #install dependencies
 sudo apt update && apt list -u && sudo apt dist-upgrade -y
 sudo apt install certbot python3-certbot-nginx -y
+
+#  = note: /usr/bin/ld: cannot find -lmysqlclient
+#         collect2: error: ld returned 1 exit status
+#
+# error: could not compile `vaultwarden` due to previous error
+
+sudo apt install libmysqlclient-dev -y
+
 sudo apt install dirmngr git libssl-dev pkg-config build-essential curl wget git apt-transport-https ca-certificates curl software-properties-common pwgen nginx-full -y
 
 # error: This revision of snap "rustup" was published using classic confinement and thus may perform
