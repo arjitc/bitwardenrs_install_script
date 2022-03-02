@@ -60,6 +60,14 @@ sudo git config --global user.name "${name}"
 sudo apt update && apt list -u && sudo apt dist-upgrade -y
 sudo apt install certbot python3-certbot-nginx -y
 sudo apt install dirmngr git libssl-dev pkg-config build-essential curl wget git apt-transport-https ca-certificates curl software-properties-common pwgen nginx-full -y
+
+# error: This revision of snap "rustup" was published using classic confinement and thus may perform
+#        arbitrary system changes outside of the security sandbox that snaps are usually confined to,
+#       which may put your system at risk.
+# 
+# If you understand and want to proceed repeat the command including --classic.
+snap install rustup --classic
+
 curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
 sudo apt install nodejs -y
 curl https://sh.rustup.rs -sSf | sh
