@@ -154,7 +154,7 @@ sudo letsencrypt certonly --webroot -w /var/www/letsencrypt -d ${domain}
 git clone https://github.com/dani-garcia/vaultwarden.git
 cd vaultwarden/
 git checkout
-cargo build --features sqlite --release
+cargo build --features mysql --release
 cd ..
 
 #Download precompiled webvault
